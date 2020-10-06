@@ -1,3 +1,40 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="appMenu">
+    <ion-header>
+      <ion-toolbar color="light">
+        <ion-title>App Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle menu="appMenu">
+          <ion-item lines="none" routerLink=''>
+            <ion-icon name="home-outline"></ion-icon>&nbsp;&nbsp;
+            <ion-label>Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle menu="appMenu">
+          <ion-item lines="none" routerLink=''>
+            <ion-icon name="person-circle-sharp"></ion-icon>&nbsp;&nbsp;
+            <ion-label>Admin</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle menu="appMenu">
+          <ion-item lines="none" routerLink='about'>
+            <ion-icon name="person-outline"></ion-icon>&nbsp;&nbsp;
+            <ion-label>About App</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+    <ion-footer>
+      <ion-menu-toggle menu="appMenu">
+        <ion-item lines="none" routerLink=''>
+          <ion-icon name="exit-outline"></ion-icon>&nbsp;&nbsp;
+          <ion-label>Exit</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-footer>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>
