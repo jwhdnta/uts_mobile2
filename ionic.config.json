@@ -1,0 +1,7 @@
+{
+  "name": "uts_mobile2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
