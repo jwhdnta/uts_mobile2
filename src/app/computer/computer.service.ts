@@ -12,7 +12,7 @@ export class ComputerService {
     {
       id: '1',
       jenis: 'GPU',
-      foto: 'https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-04-24-17-31/digitalfoundry-best-graphics-card-every-amd-nvidia-tested-7001-1587745896837.jpg/EG11/thumbnail/750x422/format/jpg/quality/60',
+      foto: ['https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-04-24-17-31/digitalfoundry-best-graphics-card-every-amd-nvidia-tested-7001-1587745896837.jpg/EG11/thumbnail/750x422/format/jpg/quality/60'],
       merk: "NiVidia",
       model: "RTX2080 Ti",
       harga: 2500000,
@@ -21,7 +21,7 @@ export class ComputerService {
     {
       id: '2',
       jenis: 'GPU',
-      foto: 'https://venturebeat.com/wp-content/uploads/2018/04/evga-gtx-1080-100663485-orig.png?fit=400%2C259&strip=all',
+      foto: ['https://venturebeat.com/wp-content/uploads/2018/04/evga-gtx-1080-100663485-orig.png?fit=400%2C259&strip=all'],
       merk: "GeForce",
       model: "GTX 1080",
       harga: 2000000,
@@ -30,7 +30,7 @@ export class ComputerService {
     {
       id: '3',
       jenis: 'CPU',
-      foto: 'https://cdn11.bigcommerce.com/s-0yiknm/images/stencil/1280x1280/products/11376/10579/i5__15260.1522247697.jpg?c=2',
+      foto: ['https://cdn11.bigcommerce.com/s-0yiknm/images/stencil/1280x1280/products/11376/10579/i5__15260.1522247697.jpg?c=2'],
       merk: "Intel",
       model: "i5",
       harga: 3000000,
@@ -39,7 +39,7 @@ export class ComputerService {
     {
       id: '4',
       jenis: 'Motherboard',
-      foto: 'https://cf.shopee.co.id/file/de58ea482d2186ce5344cc20abe2b1d3',
+      foto: ['https://cf.shopee.co.id/file/de58ea482d2186ce5344cc20abe2b1d3'],
       merk: "MSI",
       model: "LGA 1155",
       harga: 700000,
@@ -48,7 +48,7 @@ export class ComputerService {
     {
       id: '5',
       jenis: 'RAM',
-      foto: 'https://www.tweaktown.com/images/news/5/9/59237_02_geil-reveal-asus-certified-evo-rog-rgb-ram.jpg',
+      foto: ['https://www.tweaktown.com/images/news/5/9/59237_02_geil-reveal-asus-certified-evo-rog-rgb-ram.jpg'],
       merk: "ROG",
       model: "Evo X ROG",
       harga: 2600000,
@@ -57,7 +57,7 @@ export class ComputerService {
     {
       id: '6',
       jenis: 'Motherboard',
-      foto: 'https://i1.wp.com/res.cloudinary.com/murdockcruz/image/upload/v1590814362/Mobo%20Z490%20Murah/Gigabyte_Z490_UD_rqdrkw.jpg?resize=599%2C750&ssl=1',
+      foto: ['https://i1.wp.com/res.cloudinary.com/murdockcruz/image/upload/v1590814362/Mobo%20Z490%20Murah/Gigabyte_Z490_UD_rqdrkw.jpg?resize=599%2C750&ssl=1'],
       merk: "GigaByte",
       model: "Z490",
       harga: 4000000,

@@ -12,11 +12,11 @@
     <ion-row>
       <ion-col size-md="6" size-xs="6" *ngFor="let data of computers">
         <ion-card [routerLink]="['./', data.id]" *ngIf="data.stok > 0">
-          <ion-img [src]="data.foto"></ion-img>
+          <ion-img [src]="data.foto[0]"></ion-img>
           <ion-card-header>
             <ion-card-title>{{data.merk}} - {{data.model}}</ion-card-title>
           </ion-card-header>
-          <ion-card-content height="auto">
+          <ion-card-content>
             Rp. {{ data.harga }},-
             <br>
             Tersedia: {{ data.stok }}
