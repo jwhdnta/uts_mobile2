@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ComputerService } from './computer.service';
+import { Computer } from './model/computer.model';
 
 @Component({
   selector: 'app-computer',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./computer.page.scss'],
 })
 export class ComputerPage implements OnInit {
+  computers: Computer[];
 
-  constructor() { }
+  constructor(
+    private computersService: ComputerService,
+  ) { }
 
   ngOnInit() {
   }
 
+  ionViewWillEnter(){
+    this.computers = this.computersService.getAllComputers();
+    console.log(this.computers);
+  }
 }
