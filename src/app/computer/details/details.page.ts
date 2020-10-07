@@ -29,8 +29,7 @@ export class DetailsPage implements OnInit {
       this.computer = this.computerService.getComputer(id);
       if(this.computer.jenis === 'CPU') this.cpu = this.computerService.getCpu(id);
       else if(this.computer.jenis === 'Motherboard') this.motherboard = this.computerService.getMotherBoard(id);
-      else if(this.computer.jenis === 'Ram') this.ram = this.computerService.getRam(id);
-      // console.log("loaded: " + this.loadedContact.name);
+      else if(this.computer.jenis === 'RAM') this.ram = this.computerService.getRam(id);
     });
   }
 

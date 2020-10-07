@@ -12,7 +12,10 @@ export class ComputerService {
     {
       id: '1',
       jenis: 'GPU',
-      foto: ['https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-04-24-17-31/digitalfoundry-best-graphics-card-every-amd-nvidia-tested-7001-1587745896837.jpg/EG11/thumbnail/750x422/format/jpg/quality/60'],
+      foto: [
+        'https://d2skuhm0vrry40.cloudfront.net/2020/articles/2020-04-24-17-31/digitalfoundry-best-graphics-card-every-amd-nvidia-tested-7001-1587745896837.jpg/EG11/thumbnail/750x422/format/jpg/quality/60',
+        'https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/geforce-rtx-turing/2080-ti/gallery/geforce-rtx-2080-ti-gallery-c-641-u@2x.jpg'
+      ],
       merk: "NiVidia",
       model: "RTX2080 Ti",
       harga: 2500000,
@@ -21,7 +24,11 @@ export class ComputerService {
     {
       id: '2',
       jenis: 'GPU',
-      foto: ['https://venturebeat.com/wp-content/uploads/2018/04/evga-gtx-1080-100663485-orig.png?fit=400%2C259&strip=all'],
+      foto: [
+              'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/3/16/16260403/16260403_c1882982-db5e-48b8-8362-f7cccb44f07e_1000_1000.png', 
+              'https://ecs7.tokopedia.net/img/cache/700/product-1/2017/4/16/4474515/4474515_07a105d6-9243-4066-b2a4-6789fbe3192d_1000_1000.png',
+              'https://c1.neweggimages.com/ProductImage/14-487-335-S99.jpg'
+            ],
       merk: "GeForce",
       model: "GTX 1080",
       harga: 2000000,

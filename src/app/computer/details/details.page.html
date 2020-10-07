@@ -8,5 +8,71 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="1" size-xs="0"></ion-col>
+      <ion-col  size-md="5" size-xs="12">
+        <ion-slides>
+          <ion-slide *ngFor="let pict of computer.foto">
+            <div class="slide">
+              <ion-img [src]="pict"></ion-img>
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+      <ion-col size-md="5" size-xs="12">
+        <ion-item color="primary">
+          <h5>
+            <strong>{{ computer.jenis }}</strong><br>
+            {{ computer.merk }} - {{ computer.model }}
+            <br>
+            Rp. {{ computer.harga }},-  <br>
+            Tersedia: {{ computer.stok }}
+          </h5>
+        </ion-item><br>
 
+        <!-- tentang produk -->
+        <ion-item *ngIf="computer.jenis === 'Motherboard'">
+          <ion-list>
+            <ion-label>
+              <strong>Tentang Produk: </strong> <br><br>
+              Chipset: {{ motherboard.chipset }} <br>
+              Processor Access: 
+            </ion-label>
+            <ion-label *ngFor="let data of motherboard.processorAccess">
+              - &nbsp; {{ data }}
+            </ion-label>
+          </ion-list>
+        </ion-item>
+        <ion-item *ngIf="computer.jenis === 'CPU'">
+          <ion-list>
+            <ion-label>
+              <strong>Tentang Produk: </strong> <br><br>
+              Base Clock: {{ cpu.baseClock }} G.Hz<br>
+              Boost Clock: {{ cpu.boostClock }} G.Hz<br>
+              Core: {{ cpu.core }} <br>
+              Thread: {{ cpu.thread }}
+            </ion-label>
+          </ion-list>
+        </ion-item>
+        <ion-item *ngIf="computer.jenis === 'RAM'">
+          <ion-list>
+            <ion-label>
+              <strong>Tentang Produk: </strong> <br><br>
+              Speed: {{ ram.speed }}
+            </ion-label>
+          </ion-list>
+        </ion-item>
+        <ion-item *ngIf="computer.jenis === 'GPU'">
+          <ion-list>
+            <ion-label>
+              <strong>Tentang Produk: </strong> <br><br>
+              Tidak Ada
+            </ion-label>
+          </ion-list>
+        </ion-item>
+      </ion-col>
+      <ion-col size-md="1" size-xs="0"></ion-col>
+    </ion-row>
+  </ion-grid>  
 </ion-content>

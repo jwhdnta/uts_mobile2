@@ -28,8 +28,13 @@ export class AdminPage implements OnInit {
 
   deleteComputer(computerId: string, jenis: string){
     this.computersService.deleteComputer(computerId, jenis);
-    this.router.navigate(['./computer']);
+    this.router.navigate(['./home']);
     this.presentToast();
+  }
+
+  update(computer: Computer, slidingItem: IonItemSliding){
+    slidingItem.close();
+    this.router.navigate(['./computer/update/' + computer.id]);
   }
 
   async presentAlert(data: Computer, slidingItem: IonItemSliding) {
