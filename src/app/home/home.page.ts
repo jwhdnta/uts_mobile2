@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ComputerService } from '../computer/computer.service';
+import { Computer } from '../computer/model/computer.model';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  computers: Computer[];
+  constructor(
+    private computersService: ComputerService
+  ) {}
 
-  constructor() {}
-
+  ionViewWillEnter(){
+    this.computers = this.computersService.getAllComputers();
+    // console.log(this.computers);
+  }
 }
