@@ -110,18 +110,10 @@ export class ComputerService {
     })
   }
 
-  getAllRams(){
-    return [...this.rams];
-  }
-
   getRam(ramId: string){
     return this.rams.find(ram => {
       return ram.id === ramId;
     })
-  }
-
-  getAllMotherboards(){
-    return [...this.motherboards];
   }
 
   getMotherBoard(moboId: string){
@@ -130,12 +122,8 @@ export class ComputerService {
     })
   }
 
-  getAllCpus(){
-    return [...this.cpus];
-  }
-
   getCpu(cpuId: string){
-    return this.rams.find(cpu => {
+    return this.cpus.find(cpu => {
       return cpu.id === cpuId;
     })
   }
