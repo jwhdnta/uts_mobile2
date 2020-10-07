@@ -97,6 +97,10 @@ export class ComputerService {
   constructor() { }
 
   getAllComputers(){
+    // console.log(this.computers);
+    // console.log(this.cpus);
+    // console.log(this.rams);
+    // console.log(this.motherboards);
     return [...this.computers];
   }
 
@@ -133,6 +137,26 @@ export class ComputerService {
   getCpu(cpuId: string){
     return this.rams.find(cpu => {
       return cpu.id === cpuId;
+    })
+  }
+
+  deleteComputer(computerId: string, jenis: string){
+    // console.log("masuk service :" + computerId);
+    this.computers = this.computers.filter(computer => {
+      if(jenis === 'CPU'){
+        this.cpus = this.cpus.filter(cpu => {
+          return cpu.id !== computerId;
+        })
+      }else if(jenis === 'Motherboard'){
+        this.motherboards = this.motherboards.filter(mobo => {
+          return mobo.id !== computerId;
+        })
+      }else if(jenis === 'RAM'){
+        this.rams = this.rams.filter(ram => {
+          return ram.id !== computerId;
+        })
+      }
+      return computer.id !== computerId;
     })
   }
 }

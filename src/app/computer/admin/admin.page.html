@@ -48,7 +48,7 @@
               </ion-item-option>
             </ion-item-options>
             <ion-list>
-              <ion-item [routerLink]="['../../', 'update', data.id]">
+              <ion-item lines="none" [routerLink]="['../../', 'update', data.id]">
                 <ion-col size-md="4" size-xs="4">
                   <ion-img [src]="data.foto[0]"></ion-img>
                 </ion-col>
@@ -62,7 +62,7 @@
               </ion-item>
             </ion-list>
             <ion-item-options side="end">
-              <ion-item-option (click)="delete(data, slidingItem)" color="danger">
+              <ion-item-option (click)="presentAlert(data, slidingItem)" color="danger">
                 <ion-icon name="trash-outline" slot="icon-only"></ion-icon>
               </ion-item-option>
             </ion-item-options>
