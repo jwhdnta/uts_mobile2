@@ -18,7 +18,7 @@ export class ComputerPage implements OnInit {
   }
 
   ionViewWillEnter(){
-    this.computers = this.computersService.getAllComputers();
+    this.computers = this.computersService.getAllComputersHasStok();
     // console.log(this.computers);
   }
 }

@@ -13,10 +13,6 @@ const routes: Routes = [
     loadChildren: () => import('./create/create.module').then( m => m.CreatePageModule)
   },
   {
-    path: 'update/:id',
-    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
-  },
-  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },

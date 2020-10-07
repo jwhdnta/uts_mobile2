@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cpu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Base Clock</ion-label>
+        <ion-input type="email" formControlName="baseClock"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Boost Clock</ion-label>
+        <ion-input type="text" formControlName="boostClock"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Core</ion-label>
+        <ion-input type="number" formControlName="core"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Thread</ion-label>
+        <ion-input type="number" formControlName="thread"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col size-md="1" size-xs="1"></ion-col>
+      <ion-col size-md="10" size-xs="10">
+        <ion-button (click)="onSubmit()" color="success" [disabled]="!form.valid">Simpan</ion-button>
+      </ion-col>
+      <ion-col size-md="1" size-xs="1"></ion-col>
+    </ion-row>
+  </form>
+</ion-content>

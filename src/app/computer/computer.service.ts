@@ -111,6 +111,17 @@ export class ComputerService {
     return [...this.computers];
   }
 
+  getAllComputersHasStok(){
+    const newData = [];
+    length = this.computers.length;
+    for(var i = 0; i < length; i++){
+      if(this.computers[i].stok !== 0){
+        newData.push(this.computers[i]);
+      }
+    }
+    return [...newData];
+  }
+
   getComputer(computerId: string){
     return this.computers.find(computer => {
       return computer.id === computerId;
@@ -153,5 +164,42 @@ export class ComputerService {
       }
       return computer.id !== computerId;
     })
+  }
+
+  addProduct(computer: Computer){
+    this.computers.push({      
+      id: computer.id,      
+      jenis: computer.jenis,      
+      foto: computer.foto.split(","),
+      merk: computer.merk,
+      model: computer.model,
+      harga: computer.harga,
+      stok: computer.stok
+    }); 
+  }
+
+  addCpuData(cpuId: string, cpu: CPU){
+    this.cpus.push({
+      id: cpuId,
+      baseClock: cpu.baseClock,
+      boostClock: cpu.boostClock,
+      core: cpu.core,
+      thread: cpu.thread,
+    });
+  }
+
+  addMoboData(moboId: string, mobo: Motherboard){
+    this.motherboards.push({
+      id: moboId,
+      chipset: mobo.chipset,
+      processorAccess: mobo.processorAccess.split(",")
+    })
+  }
+
+  addRamData(ramId: string,ram: Ram){
+    this.rams.push({
+      id: ramId,
+      speed: ram.speed
+    });
   }
 }
