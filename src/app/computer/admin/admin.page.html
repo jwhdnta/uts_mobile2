@@ -48,7 +48,7 @@
               </ion-item-option>
             </ion-item-options>
             <ion-list>
-              <ion-item lines="none" [routerLink]="['../../', 'update', data.id]">
+              <ion-item lines="none" [routerLink]="['../../', 'update-' + data.jenis, data.id]">
                 <ion-col size-md="4" size-xs="4">
                   <ion-img [src]="data.foto[0]"></ion-img>
                 </ion-col>

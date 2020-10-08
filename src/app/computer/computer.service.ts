@@ -174,7 +174,7 @@ export class ComputerService {
       merk: computer.merk,
       model: computer.model,
       harga: computer.harga,
-      stok: computer.stok
+      stok: computer.stok,
     }); 
   }
 
@@ -192,14 +192,27 @@ export class ComputerService {
     this.motherboards.push({
       id: moboId,
       chipset: mobo.chipset,
-      processorAccess: mobo.processorAccess.split(",")
+      processorAccess: mobo.processorAccess.split(","),
     })
   }
 
   addRamData(ramId: string,ram: Ram){
     this.rams.push({
       id: ramId,
-      speed: ram.speed
+      speed: ram.speed,
     });
+  }
+
+  updateGPU(id: string, gpu: Computer){
+    length = this.computers.length;
+    for(var i = 0; i < length; i++){
+      if(this.computers[i].id === id){
+        this.computers[i].foto = gpu.foto.split(",");
+        this.computers[i].merk = gpu.merk;
+        this.computers[i].model = gpu.model;
+        this.computers[i].harga = gpu.harga;
+        this.computers[i].stok = gpu.stok;
+      }
+    }
   }
 }

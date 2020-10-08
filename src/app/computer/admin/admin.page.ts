@@ -34,13 +34,13 @@ export class AdminPage implements OnInit {
 
   update(computer: Computer, slidingItem: IonItemSliding){
     slidingItem.close();
-    this.router.navigate(['./computer/update/' + computer.id]);
+    this.router.navigate(['./computer/update-' + computer.jenis + '/' + computer.id]);
   }
 
   async presentAlert(data: Computer, slidingItem: IonItemSliding) {
     slidingItem.close();
     const alert = await this.alertCtrl.create({
-      header: 'Hapus Kontak',
+      header: 'Hapus Produk',
       message: 'Apakah yakin ingin menghapus? Jika sudah dihapus tidak bisa dikembalikan lagi.',
       buttons: [
         {

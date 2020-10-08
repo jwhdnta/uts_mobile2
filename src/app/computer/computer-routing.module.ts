@@ -19,6 +19,22 @@ const routes: Routes = [
   {
     path: ':id',
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'update-GPU/:id',
+    loadChildren: () => import('./updates/update-gpu/update-gpu.module').then( m => m.UpdateGpuPageModule)
+  },
+  {
+    path: 'update-CPU/:id',
+    loadChildren: () => import('./updates/update-cpu/update-cpu.module').then( m => m.UpdateCPUPageModule)
+  },
+  {
+    path: 'update-Ram/:id',
+    loadChildren: () => import('./updates/update-ram/update-ram.module').then( m => m.UpdateRAMPageModule)
+  },
+  {
+    path: 'update-Motherboard/:id',
+    loadChildren: () => import('./updates/update-motherboard/update-motherboard.module').then( m => m.UpdateMotherboardPageModule)
   }
 ];
 
