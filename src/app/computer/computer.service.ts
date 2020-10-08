@@ -170,7 +170,7 @@ export class ComputerService {
     this.computers.push({      
       id: computer.id,      
       jenis: computer.jenis,      
-      foto: (computer.foto).split(","),
+      foto: (computer.foto as unknown as string).split(','),
       merk: computer.merk,
       model: computer.model,
       harga: computer.harga,
@@ -192,7 +192,7 @@ export class ComputerService {
     this.motherboards.push({
       id: moboId,
       chipset: mobo.chipset,
-      processorAccess: (mobo.processorAccess).split(","),
+      processorAccess: (mobo.processorAccess).split(','),
     })
   }
 
@@ -207,7 +207,7 @@ export class ComputerService {
     length = this.computers.length;
     for(var i = 0; i < length; i++){
       if(this.computers[i].id === id){
-        this.computers[i].foto = (gpu.foto).split(",");
+        this.computers[i].foto = (gpu.foto).split(',');
         this.computers[i].merk = gpu.merk;
         this.computers[i].model = gpu.model;
         this.computers[i].harga = gpu.harga;
@@ -220,7 +220,7 @@ export class ComputerService {
     length = this.computers.length;
     for(var i = 0; i < length; i++){
       if(this.computers[i].id === id){
-        this.computers[i].foto = (data.foto).split(",");
+        this.computers[i].foto = (data.foto).split(',');
         this.computers[i].merk = data.merk;
         this.computers[i].model = data.model;
         this.computers[i].harga = data.harga;
@@ -240,7 +240,7 @@ export class ComputerService {
     length = this.computers.length;
     for(var i = 0; i < length; i++){
       if(this.computers[i].id === id){
-        this.computers[i].foto = (data.foto).split(",");
+        this.computers[i].foto = (data.foto).split(',');
         this.computers[i].merk = data.merk;
         this.computers[i].model = data.model;
         this.computers[i].harga = data.harga;
@@ -263,7 +263,7 @@ export class ComputerService {
     length = this.computers.length;
     for(var i = 0; i < length; i++){
       if(this.computers[i].id === id){
-        this.computers[i].foto = (data.foto).split(",");
+        this.computers[i].foto = (data.foto).split(',');
         this.computers[i].merk = data.merk;
         this.computers[i].model = data.model;
         this.computers[i].harga = data.harga;
@@ -275,7 +275,7 @@ export class ComputerService {
     for(var i = 0; i < length; i++){
       if(this.motherboards[i].id === id){
         this.motherboards[i].chipset = data2.chipset;
-        this.motherboards[i].processorAccess = (data2.processorAccess).split(",");
+        this.motherboards[i].processorAccess = (data2.processorAccess).split(',');
       }
     }
   }
