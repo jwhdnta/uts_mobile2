@@ -29,7 +29,7 @@ const routes: Routes = [
     loadChildren: () => import('./updates/update-cpu/update-cpu.module').then( m => m.UpdateCPUPageModule)
   },
   {
-    path: 'update-Ram/:id',
+    path: 'update-RAM/:id',
     loadChildren: () => import('./updates/update-ram/update-ram.module').then( m => m.UpdateRAMPageModule)
   },
   {

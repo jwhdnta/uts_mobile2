@@ -215,4 +215,24 @@ export class ComputerService {
       }
     }
   }
+
+  updateRam(id: string, data: Computer, data2: Ram){
+    length = this.computers.length;
+    for(var i = 0; i < length; i++){
+      if(this.computers[i].id === id){
+        this.computers[i].foto = data.foto.split(",");
+        this.computers[i].merk = data.merk;
+        this.computers[i].model = data.model;
+        this.computers[i].harga = data.harga;
+        this.computers[i].stok = data.stok;
+      }
+    }
+
+    length = this.rams.length;
+    for(var i = 0; i < length; i++){
+      if(this.rams[i].id === id){
+        this.rams[i].speed = data2.speed;
+      }
+    }
+  }
 }
