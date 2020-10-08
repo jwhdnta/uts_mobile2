@@ -57,7 +57,6 @@ export class UpdateRAMPage implements OnInit {
         validators: [Validators.required]
       }),  
     })
-    console.log(this.ram.speed);
   }
 
   async presentAlert(){

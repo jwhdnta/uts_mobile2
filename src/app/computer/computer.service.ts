@@ -235,4 +235,27 @@ export class ComputerService {
       }
     }
   }
+
+  updateCpu(id: string, data: Computer, data2: CPU){
+    length = this.computers.length;
+    for(var i = 0; i < length; i++){
+      if(this.computers[i].id === id){
+        this.computers[i].foto = data.foto.split(",");
+        this.computers[i].merk = data.merk;
+        this.computers[i].model = data.model;
+        this.computers[i].harga = data.harga;
+        this.computers[i].stok = data.stok;
+      }
+    }
+
+    length = this.cpus.length;
+    for(var i = 0; i < length; i++){
+      if(this.cpus[i].id === id){
+        this.cpus[i].baseClock = data2.baseClock;
+        this.cpus[i].boostClock = data2.boostClock;
+        this.cpus[i].core = data2.core;
+        this.cpus[i].thread = data2.thread;
+      }
+    }
+  }
 }
