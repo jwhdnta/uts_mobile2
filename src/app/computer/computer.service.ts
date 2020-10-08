@@ -258,4 +258,25 @@ export class ComputerService {
       }
     }
   }
+
+  updateMobo(id: string, data: Computer, data2: Motherboard){
+    length = this.computers.length;
+    for(var i = 0; i < length; i++){
+      if(this.computers[i].id === id){
+        this.computers[i].foto = data.foto.split(",");
+        this.computers[i].merk = data.merk;
+        this.computers[i].model = data.model;
+        this.computers[i].harga = data.harga;
+        this.computers[i].stok = data.stok;
+      }
+    }
+
+    length = this.motherboards.length;
+    for(var i = 0; i < length; i++){
+      if(this.motherboards[i].id === id){
+        this.motherboards[i].chipset = data2.chipset;
+        this.motherboards[i].processorAccess = data2.processorAccess.split(",");
+      }
+    }
+  }
 }
